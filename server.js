@@ -27,6 +27,8 @@ app.use((req,res,next) => {
   next();
 });
 
+//enviornment varible
+const port = process.env.PORT || 3000;
 
 // app.use((req,res,next) => {
 //   res.render('maintainance.hbs');
@@ -64,6 +66,6 @@ app.get('/bad',(req,res) => {
   });
 });
 
-app.listen(3000,() => {
-  console.log('server is up');
+app.listen(port,() => {
+  console.log(`server is up on port ${port}`);
 });
